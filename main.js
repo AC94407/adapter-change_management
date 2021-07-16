@@ -1,8 +1,8 @@
 // Update this constant with your ServiceNow credentials
 const options = {
-  url: 'yourDevServiceNowInstanceCanonicalHostname',
-  username: 'devUsername',
-  password: 'devUserPassword'
+ url: 'https://dev89566.service-now.com/',
+  username: 'admin',
+  password: 'Itential@2020'
 };
 
 
@@ -62,10 +62,10 @@ function get(serviceNowTable, callback) {
   const requestOptions = {
     method: 'GET',
     auth: {
-      user: "anjanadevi.chitikineni@lumen.com",
-      pass: "Bhavani@1",
+      user: options.username,
+      pass: options.password,
     },
-    baseUrl: "https://developer.servicenow.com/dev.do",
+    baseUrl: options.url,
     uri: `/api/now/table/${serviceNowTable}?sysparm_limit=1`,
   };
 
